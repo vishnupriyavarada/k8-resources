@@ -1,8 +1,9 @@
 apiVersion : v1
 kind: Pod
-metadat:
+metadata:
   name: annotions-pod
   annotations:
+    project: expense
     build_url: "https://jenkins/expense/dev/23"
     environment: dev
     component: expense
