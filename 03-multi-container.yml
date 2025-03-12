@@ -4,7 +4,9 @@ metadata:
   name: multi-container-pod
 spec:
   containers:
-  - name: nginx-container
-    image: nginx:latest
-  - name: almalinux-container
-    image: almalinux:9
+    - name: nginx-container
+      image: nginx
+    - name: almalinux-container
+      image: almalinux:9
+
+
