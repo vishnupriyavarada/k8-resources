@@ -1,0 +1,12 @@
+apiVersion : v1
+kind: Pod
+metadat:
+  name: annotions-pod
+  annotations:
+    build_url:"https://jenkins/expense/dev/23"
+    environment: dev
+    component: expense
+spec:
+  containers:
+  - name: annotations-nginx-container
+    image: nginx
