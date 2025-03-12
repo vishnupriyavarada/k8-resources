@@ -3,7 +3,7 @@ kind: Pod
 metadat:
   name: annotions-pod
   annotations:
-    build_url:"https://jenkins/expense/dev/23"
+    build_url: "https://jenkins/expense/dev/23"
     environment: dev
     component: expense
 spec:
