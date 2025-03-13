@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: env-pod
+spec:
+  containers:
+  - name: env-container
+    image: nginx
+    env:
+      # environment variables again a key value pair
+    - name: course
+      value: DevSecOps
+    - name: trainer
+      value: Sivakumar
+    - name: duration
+      value: 120 HRs
+
