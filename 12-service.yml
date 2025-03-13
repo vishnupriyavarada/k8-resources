@@ -1,0 +1,34 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: my-service
+spec:
+  #selector says to us that,  to which pods this service is going to get attached
+  # or selector says this service should communicate to which pod
+  selector: # labels are used as selectors
+    project: expense
+    environment: dev
+    component: backend
+    version: v1.0.0
+  ports:
+  - protocol: TCP
+    port: 80 # service port
+    targetPort: 80 # pod port
+
+---
+# service should go and attached to pod . but to which pod? There will be multiple pods. How will service identify to which pod
+# it should communicate? Labels are used as selectors
+
+apiVersion: v1
+kind: pod
+metadata:
+  name: pod1
+  labels:
+    project: expense
+    environment: dev
+    component: backend
+    version: v1.0.0
+spec:
+  containers:
+  - name: pod1-nginx-container
+    image: nginx
