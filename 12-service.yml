@@ -20,7 +20,7 @@ spec:
 # it should communicate? Labels are used as selectors
 
 apiVersion: v1
-kind: pod
+kind: Pod
 metadata:
   name: pod1
   labels:
