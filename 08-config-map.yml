@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: Configmap-pod
+data: # what type of data is stored. It's a key value pair like env resource
+  course: "kubernetes"
+  duration: "25hrs"
