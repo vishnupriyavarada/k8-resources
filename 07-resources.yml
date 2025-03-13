@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: resources-pod
+spec:
+  containers:
+    - name: resouces-nginx-container
+      image: nginx
+      resources:
+        requests: # Soft limit
+          memory: "64Mi"
+          cpu: "100m"
+        limits: # Hard limit - can be same  or greater than soft limit
+          memory: "128Mi"
+          cpu: "250m"
