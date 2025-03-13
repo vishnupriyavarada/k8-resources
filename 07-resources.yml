@@ -7,9 +7,9 @@ spec:
     - name: resouces-nginx-container
       image: nginx
       resources:
-        requests: # Soft limit
+        requests:
           memory: "64Mi"
           cpu: "100m"
-        limits: # Hard limit - can be same  or greater than soft limit
-          memory: "128Mi"
+        limits:
+          memory: "120Mi"
           cpu: "250m"
