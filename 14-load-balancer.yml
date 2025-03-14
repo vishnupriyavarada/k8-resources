@@ -1,0 +1,27 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: loadbalancer-service
+spec:
+  type: LoadBalancer
+  selector:
+    demo: lb-demo
+    environment: dev
+  ports:
+  - protocol: tcp
+    port: 80 # service port
+    targetport: 80 # pod port
+    nodeport: 30008
+
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: lb-pod
+  labels:
+    demo: lb-demo
+    environment: dev
+spec:
+  containers:
+  - name: lb-container
+    image: nginx
