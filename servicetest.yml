@@ -3,7 +3,7 @@ kind: Service
 metadata:
   name: demoservice
 spec:
-  selectors: # pod labels
+  selector: # pod labels
     component: testcomponent
   ports:
   - protocol: TCP
