@@ -1,10 +1,12 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: demoservice
+  name: node-port-service
 spec:
+  type: NodePort
   selector: # pod labels
     component: testcomponent
+    demo: nodeport
   ports:
   - protocol: TCP
     port: 80 # service port
@@ -15,12 +17,13 @@ spec:
 apiVersion: v1
 kind: Pod
 metadata:
-  name: demopod
+  name: node-port-pod
   labels:
     component: testcomponent
+    demo: nodeport
 spec:
   containers:
-  - name: democontainer
+  - name: nodeportcontainer
     image: nginx
 
 
