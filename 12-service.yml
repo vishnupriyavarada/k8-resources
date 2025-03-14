@@ -16,8 +16,8 @@ spec:
     targetPort: 80 # pod port
 
 ---
-# service should go and attached to pod . but to which pod? There will be multiple pods. How will service identify to which pod
-# it should communicate? Labels are used as selectors
+# service should go and attach to a pod . but to which pod? There will be multiple pods. How will service identify to which pod
+# it should communicate? By using Labels of the pod . Labels are used as selectors for service
 
 apiVersion: v1
 kind: Pod
