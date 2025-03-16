@@ -1,0 +1,20 @@
+appVersion: v1
+kind: ReplicaSet
+metadata:
+  name: nginx-replica-set
+  labels:
+     project: demo-replicasets
+spec:
+  replica: 3
+  selectors:
+    matchlabels:
+       project: demo-replicasets
+  template:
+    metadata:
+      labels:
+        project: demo-replicasets
+    spec:
+      containers:
+      - name: replica-nginx-container
+        image: nginx
+
