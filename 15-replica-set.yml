@@ -4,18 +4,19 @@ metadata:
   name: nginx-replica-set
   # these are replicaset lables
   labels:
-     project: demo-replicasets
+     #project: demo-replicasets
+     demo: replicasets-test
 spec:
   replicas: 3
   # replicaset uses these labels to find the pod for creating desired number of replicas  
   selector:
     matchLabels:
-       project: demo-replicasets
+       project: pod-replicasets
   # pod template
   template:
     metadata:
       labels:
-        project: demo-replicasets
+        project: pod-replicasets
     spec:
       containers:
       - name: replica-nginx-container
