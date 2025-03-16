@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: ReplicaSet
 metadata:
-  name: nginx-replica-set
+  name: nginx-replica-set-1
   # these are replicaset lables
   labels:
      demo: demo-replicasets
