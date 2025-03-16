@@ -4,7 +4,7 @@ metadata:
   name: nginx-replica-set-1
   # these are replicaset lables
   labels:
-     demo: demo-replicasets
+     demo: demo-replicasets-1
 spec:
   replicas: 3
   # replicaset uses these labels to find the pod for creating desired number of replicas  
