@@ -5,7 +5,7 @@ metadata:
   # these are replicaset lables
   labels:
      #project: demo-replicasets
-     demo: replicasets-test
+     project: pod-replicasets
 spec:
   replicas: 3
   # replicaset uses these labels to find the pod for creating desired number of replicas  
