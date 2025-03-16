@@ -1,10 +1,10 @@
 apiVersion: apps/v1
 kind: ReplicaSet
 metadata:
-  name: nginx-replica-set-1
+  name: nginx-replica-set
   # these are replicaset lables
   labels:
-     demo: demo-replicasets-1
+     demo: my-replicaset
 spec:
   replicas: 3
   # replicaset uses these labels to find the pod for creating desired number of replicas  
@@ -19,5 +19,5 @@ spec:
     spec:
       containers:
       - name: replica-nginx-container
-        image: nginx:stable-perl
+        image: nginx
 
