@@ -6,7 +6,7 @@ metadata:
   labels:
      project: demo-replicasets
 spec:
-  replica: 3
+  replicas: 3
   # replicaset uses these labels to find the pod for creating desired number of replicas  
   selector:
     matchLabels:
