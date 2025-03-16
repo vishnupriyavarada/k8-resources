@@ -2,13 +2,16 @@ appVersion: v1
 kind: ReplicaSet
 metadata:
   name: nginx-replica-set
+  # these are replicaset lables
   labels:
      project: demo-replicasets
 spec:
   replica: 3
+  # replicaset uses these labels to find the pod for creating desired number of replicas  
   selectors:
     matchlabels:
        project: demo-replicasets
+  # pod template
   template:
     metadata:
       labels:
