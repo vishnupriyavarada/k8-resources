@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sample-deployment
+  # Labels for deployment resource
+  labels:
+    project: sample-deployment-project
+    tier: web
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      tag: sample-deployment-dev
+      env: dev
+  template:
+    metadata:
+      labels:
+        tag: sample-deployment-dev
+        env: dev
+    spec:
+     containers:
+     - name: sample-deployment-pod
+       image: nginx
+       ports:
+       - containerPort: 80
+
