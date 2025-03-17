@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-deployment
+  #labels of deployment resource
+  labels:
+    app: frontend
+    tier: web
+    purpose: deployment
+spec:
+  replicas: 3
+  selector:
+    matchlabels:
+      app: frontend
+      purpose: deployment-pod
+  template:
+    metadata:
+      labels:
+        app: frontend
+        purpose: deployment-pod
+    spec:
+      containers:
+      - name: fromtend-dp-container
+        image: nginx
+        ports:
+        - containerPort: 80
