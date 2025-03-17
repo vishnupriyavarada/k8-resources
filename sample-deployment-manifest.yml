@@ -37,7 +37,8 @@ spec:
   - protocol: TCP
     port: 80 # service port
     targetPort: 80 # Pod port. even if  you don't give k8s will take it automatically
-    nodePort: 30009 # Open this port in any of the phyical server SG. in the inbound rules of SG add this port
+    nodePort: 30009 # Open this port in any of the phyical server SG. in the inbound rules of SG , add this port. 
+                    # Not required K8s is automatically creating the node port
 
 
 
