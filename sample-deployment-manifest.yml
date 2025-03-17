@@ -34,7 +34,7 @@ spec:
     tag: sample-deployment-dev
     env: dev
   ports:
-  - protocol: tcp
+  - protocol: TCP
     port: 80 # service port
     targetPort: 80 # Pod port. even if  you don't give k8s will take it automatically
     nodePort: 30009 # Open this port in any of the phyical server SG. in the inbound rules of SG add this port
