@@ -20,7 +20,26 @@ spec:
     spec:
      containers:
      - name: sample-deployment-pod
-       image: nginx
+       image: vishnupriyadh/sample-deployment:1.0.0
        ports:
        - containerPort: 80
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: sample-deployment-lb
+spec:
+  type: LoadBalancer
+  selector:
+    tag: sample-deployment-dev
+    env: dev
+  ports:
+  - protocol: tcp
+    port: 80 # service port
+    targetPort: 80 # Pod port. even if  you don't give k8s will take it automatically
+    nodePort: 30009 # Open this port in any of the phyical server SG. in the inbound rules of SG add this port
+
+
+
+
 
