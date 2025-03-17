@@ -10,7 +10,7 @@ metadata:
 spec:
   replicas: 3
   selector:
-    matchlabels:
+    matchLabels:
       app: frontend
       purpose: deployment-pod
   template:
