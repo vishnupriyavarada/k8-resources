@@ -20,7 +20,7 @@ spec:
     spec:
      containers:
      - name: sample-deployment-pod
-       image: vishnupriyadh/sample-deployment:1.0.0
+       image: vishnupriyadh/sample-deployment:2.0.0
        ports:
        - containerPort: 80
 ---
