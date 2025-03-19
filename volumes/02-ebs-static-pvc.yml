@@ -3,8 +3,8 @@ kind: PersistentVolumeClaim
 metadata:
   name: ebs-static-pvc
 spec:
-  StorageClassName: ""
-  VolumeName: ebs-static # pv name should be given here
+  storageClassName: ""
+  volumeName: ebs-static # pv name should be given here
   accessModes:
   - ReadWriteOnce
   resources:
