@@ -20,10 +20,10 @@ spec:
   - name: nginx-container
     image: nginx
     volumeMounts:
-    - name: persistant-storage
+    - name: persistent-storage
       mountPath: /usr/share/nginx/html 
   volumes:
-  - name: persistant-storage
+  - name: persistent-storage
     persistentVolumeClaim:
       claimName: ebs-static-pvc 
 
