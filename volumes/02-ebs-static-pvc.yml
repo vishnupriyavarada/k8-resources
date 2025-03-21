@@ -19,7 +19,7 @@ spec:
   nodeSelector:
     topology.kubernetes.io/zone: us-east-1d
   containers:
-  - name: nginx
+  - name: nginx-container
     image: nginx
     volumeMounts:
     - name: persistent-storage
@@ -27,6 +27,6 @@ spec:
   volumes:
   - name: persistent-storage
     persistentVolumeClaim:
-      claimName: ebs-static
+      claimName: ebs-static-pvc
 
 
