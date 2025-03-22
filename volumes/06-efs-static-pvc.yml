@@ -18,8 +18,9 @@ metadata:
   labels:
     purpose: "efs-static-demo"
 spec:
-  nodeSelector:
-    topology.kubernetes.io/zone: us-east-1c
+  #  since its network we don't need nodeselector as pod don't attach to any node
+  # nodeSelector:
+  #   topology.kubernetes.io/zone: us-east-1c
   containers:
   - name: nginx-container
     image: nginx
