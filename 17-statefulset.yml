@@ -29,8 +29,8 @@ spec:
   template:
     metadata:
       labels:
-      app: nginx-headless # has to match .spec.selector.matchLabels
-      demo: statefulset 
+        app: nginx-headless # has to match .spec.selector.matchLabels
+        demo: statefulset 
     spec:
       terminationGracePeriodSeconds: 10
       containers:
