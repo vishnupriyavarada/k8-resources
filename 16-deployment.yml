@@ -24,3 +24,18 @@ spec:
         image: nginx
         ports:
         - containerPort: 80
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: deployment-lb-service
+spec:
+  type: LoadBalancer
+  selector: # labels are used as selectors
+    app: frontend
+    purpose: deployment-pod
+  ports:
+  - protocol: TCP
+    port: 80 # service port
+    targetPort: 80
+    nodePort: 30007
