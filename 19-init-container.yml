@@ -10,5 +10,5 @@ spec:
     image: nginx
   initContainers:
   - name: init-myservice
-    image: nginx
+    image: busybox:1.28
     command: ['sh', '-c', "until nslookup google.com; do echo waiting for myservice; sleep 10; done"]
